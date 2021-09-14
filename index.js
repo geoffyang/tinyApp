@@ -1,14 +1,17 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-    sites = {
-        0: "app",
-        1: "blog",
-        2: "shop",
-        3: "notes"
-    }
+    sites = ["app",
+        "blog",
+        "shop",
+        "notes"
+    ]
+
+    let currentDisplay = 0
 
     const navbar = document.getElementById('navbar')
     const appName = document.getElementById('appName')
+    const leftArrow = document.getElementById('left_arrow')
+    const rightArrow = document.getElementById('right_arrow')
 
 
     for (site in sites) {
@@ -18,7 +21,12 @@ document.addEventListener("DOMContentLoaded", function () {
         navbar.appendChild(tempDiv)
     }
 
-    appName.innerHTML = sites["1"]
+    rightArrow.addEventListener('click', () => {
+        currentDisplay++;
+        console.log('clicked', currentDisplay);
+    })
+
+    appName.innerHTML = sites[currentDisplay]
 
 
 })
