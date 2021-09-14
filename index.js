@@ -8,6 +8,8 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     const navbar = document.getElementById('navbar')
+    const appName = document.getElementById('appName')
+
 
     for (site in sites) {
         tempDiv = document.createElement('div')
@@ -15,6 +17,8 @@ document.addEventListener("DOMContentLoaded", function () {
         tempDiv.innerHTML = sites[site]
         navbar.appendChild(tempDiv)
     }
+
+    appName.innerHTML = sites["1"]
 
 
 })
