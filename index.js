@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
     for (site of sites) {
         tempDiv = document.createElement('div')
         tempDiv.className = "links";
-        tempDiv.text = site
+        tempDiv.innerHTML = site
         navbar.appendChild(tempDiv)
     }
 
