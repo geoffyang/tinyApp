@@ -2,6 +2,13 @@
     box-sizing: border-box;
 }
 
+#splash {
+    display: flex;
+    flex-direction: column;
+}
+
+#navbar {}
+
 #upper {
     background-color: green;
     font-size: 70px;
