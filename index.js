@@ -1,13 +1,18 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-    sites = ["app", "blog", "shop", "notes"]
+    sites = {
+        0: "app",
+        1: "blog",
+        2: "shop",
+        3: "notes"
+    }
 
     const navbar = document.getElementById('navbar')
 
-    for (site of sites) {
+    for (site in sites) {
         tempDiv = document.createElement('div')
         tempDiv.className = "links";
-        tempDiv.innerHTML = site
+        tempDiv.innerHTML = sites[site]
         navbar.appendChild(tempDiv)
     }
 
