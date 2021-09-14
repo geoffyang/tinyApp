@@ -10,17 +10,28 @@
 #navbar {}
 
 #body_display {
+    background-color: lawngreen;
     display: flex;
     flex-wrap: row nowrap;
+    justify-content: center;
 }
 
 #upper {
     background-color: green;
     font-size: 70px;
+    height: 70%;
     color: saddlebrown;
 }
 
 #lower {
+    height: 30%;
     background-color: red;
     font-size: 40px;
+}
+
+.arrow {
+    min-width: 3rem;
+    display: flex;
+    align-items: center;
+    font-size: 15rem;
 }
