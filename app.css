@@ -9,6 +9,11 @@
 
 #navbar {}
 
+#body_display {
+    display: flex;
+    flex-wrap: row nowrap;
+}
+
 #upper {
     background-color: green;
     font-size: 70px;
