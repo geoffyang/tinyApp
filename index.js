@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let currentDisplay = 0
 
     const navbar = document.getElementById('navbar')
-    const appName = document.getElementById('appName')
+    let appName = document.getElementById('appName')
     const leftArrow = document.getElementById('left_arrow')
     const rightArrow = document.getElementById('right_arrow')
 
@@ -22,8 +22,9 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     rightArrow.addEventListener('click', () => {
-        currentDisplay++;
-        console.log('clicked', currentDisplay);
+        (currentDisplay === sites.length) ? currentDisplay = 0 : currentDisplay++;
+        appName.innerHTML = sites[currentDisplay]
+
     })
 
     appName.innerHTML = sites[currentDisplay]
